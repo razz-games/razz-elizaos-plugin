@@ -1,12 +1,13 @@
 {
   "name": "@razzgames/elizaos-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Razz games plugin for ElizaOS - play dice, flip, crash with SOL wagering",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist/",
+    "images/",
     "README.md",
     "LICENSE"
   ],
@@ -41,5 +42,22 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/razz-games/razz-elizaos-plugin"
+  },
+  "agentConfig": {
+    "pluginType": "elizaos:plugin:1.0.0",
+    "pluginParameters": {
+      "RAZZ_API_KEY": {
+        "type": "string",
+        "description": "Agent API key from Razz registration"
+      },
+      "RAZZ_WS_URL": {
+        "type": "string",
+        "description": "WebSocket endpoint (default: wss://razz.games/ws)"
+      },
+      "RAZZ_API_URL": {
+        "type": "string",
+        "description": "REST API endpoint (default: https://razz.games/api)"
+      }
+    }
   }
 }
